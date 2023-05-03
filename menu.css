@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+body .shell {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body .shell-top {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(24, 16, 61), rgb(31, 16, 25));
+    position: absolute;
+    transition: .2s;
+    overflow: hidden;
+}
+  
+body .shell-top img {
+    width: 100%;
+}
+  
+body .shell-top .word {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+body .shell-top .word h2 {
+    font: 100 70px 'font';
+    color: #fff;
+    letter-spacing: 2px;
+    font-style:inherit;
+}
+  
+body .shell-main {
+    width: 100%;
+    height: auto;
+    top: 100vh;
+    position: relative;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+body .shell-main-nav {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(13px);
+}
+  
+body .shell-main-nav .logo {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+  
+body .shell-main-nav .logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+  
+body .shell-main-nav .logo span {
+    font: 100 22px 'font';
+    letter-spacing: 1px;
+}
+  
+body .shell-main-nav ul {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+}
+  
+body .shell-main-nav ul .nav-box {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 115px;
+    height: 5px;
+    border-radius: 2px;
+    z-index: -999;
+    transition: .5s;
+}
+  
+body .shell-main-nav ul li {
+    width: 150px;
+    text-align: center;
+}
+  
+body .shell-main-nav ul li a{
+    color: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+body .shell-main-nav ul li div:hover {
+    cursor: pointer;
+}
+
+body .shell-main-nav ul li:nth-child(1):hover~.nav-box {
+    left: 15px;
+    background-color: red;
+}
+  
+body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
+    left: 167px;
+    background-color: #8da1f8;
+}
+  
+body .shell-main-nav ul li:nth-child(3):hover~.nav-box {
+    left: 317px;
+    background-color: #ffb1b1;
+}
+  
+body .shell-main-nav ul li:nth-child(4):hover~.nav-box {
+    left: 467px;
+    background-color: #7df88e;
+}
+
+/**/
+
+body .shell-main-intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #e37e64, #a1e6ff);
+    height: 1100px;
+}
+
+body .shell-main-intro img {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 5px solid transparent;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+body .shell-main-intro h2 {
+    font: 100 60px '';
+    margin-bottom: 20px;
+    font-family: font;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgb(134, 134, 118);
+    color: #ffffff;
+    text-align: center;
+}
+
+body .shell-main-intro h2 span {
+    font: 100 10px '';
+}
+
+body .shell-main-intro p {
+    font: 100 30px '';
+    letter-spacing: 2px;
+}
+
+.h-b {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+
+}
+
+.h-b p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.h-b-l,
+.h-b-r {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* */
+body .shell-main-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 510px;
+    flex-direction: column;
+    margin: 200px;
+}
+  
+body .shell-main-bottom h2 {
+    font: 100 34px 'font';
+    color: #48afa5;
+    letter-spacing: 2px;
+    margin-left: 100px;
+}
+  
+body .shell-main-bottom h2 span {
+    font-size: 80px;
+    color: turquoise;
+}
+  
+body .shell-main-bottom-bottom {
+    width: 100%;
+    height: auto;
+    padding: 20px 0 100px 0;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
+    backdrop-filter: blur(30px);
+    position: relative;
+}
+
+body .shell-main-bottom-bottom ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+body .shell-main-bottom-bottom ul li {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 12px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    transition: .3s;
+    margin-bottom: 100px;
+}
+
+body .shell-main-bottom-bottom ul li span {
+    font-size: 12px;
+    text-align: center;
+}
+
+body .shell-main-bottom-bottom ul li:hover {
+    padding: 2px;
+    margin: 8px;
+}
+  
+body .shell-main-bottom-bottom ul li:hover h2 {
+    letter-spacing: 3px;
+}
+  
+body .shell-main-bottom-bottom ul li img {
+    width: 100%;
+    border-radius: 50%;
+}
+  
+body .shell-main-bottom-bottom ul li h2 {
+    margin: 30px 0 10px 0;
+    font-size: 24px;
+    transition: .3s;
+    color: black;
+    text-align: center;
+    letter-spacing: 0;
+}
+  
+body .shell-main-bottom-bottom ul li span {
+    color: #525252;
+}
+
+body .shell-main-bottom {
+    margin: 200px;
+}
+
+body .shell-main-bottom-bottom ul li {
+    width: 250px;
+    height: 250px;
+}
+
+body .shell-main-bottom {
+    margin: 600px 0;
+}
+
+body .shell-main-bottom {
+    margin: 0;
+}
+
+/**/
+body .shell-main-building {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1500px;
+    flex-direction: column;
+    margin: 200px;
+}
+  
+body .shell-main-building h2 {
+    font: 100 34px 'font';
+    color: #48afa5;
+    letter-spacing: 2px;
+    margin-left: 100px;
+}
+
+body .shell-main-building h2 span {
+    font-size: 80px;
+    color: turquoise;
+}
+  
+body .shell-main-building-bottom {
+    width: 100%;
+    height: 1200px;
+    padding: 20px 0 100px 0;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
+    backdrop-filter: blur(30px);
+    position: relative;
+}
+  
+body .shell-main-building-bottom img {
+    width: 400px;
+    height: 250px;
+    margin: 20px;
+    flex: 0 0 calc(50% - 40px);
+}
+
+.b1, .b4, .b7, .b10{
+    padding-left: 80px;
+}
+
+body .shell-main-building {
+    margin: 200px;
+}
+
+body .shell-main-building {
+    margin: 600px 0;
+}
+
+body .shell-main-building {
+    margin: 0;
+}
+
+/**/
+.paint {
+    font: 100 34px 'font';
+    color: #48afa5;
+    letter-spacing: 2px;
+
+}
+
+.paintspan {
+    font-size: 80px;
+    color: turquoise;
+}
+
+body .shell-main-paint {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #978989;
+    margin-bottom: 150px;
+    overflow: hidden;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+  }
+  
+  body .shell-main-paint .images {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+  }
+  
+  body .shell-main-paint .images .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  
+body .shell-main-paint .images .img .shell-main-paint-word {
+    width: 800px;
+    overflow-x: hidden;
+    height: 500px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(0px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: .5s;
+}
+  
+body .shell-main-lbt .images .img .shell-main-lbt-word h2 {
+    font: 400 32px 'font';
+    transition: .6s;
+    transition-delay: .4s;
+}
+
+body .shell-main-paint .images .img .shell-main-paint-word img {
+    height: 350px;
+    width: 700px;
+    transition: .6s;
+    transition-delay: .4s;
+}
+  
+body .shell-main-paint .min-images {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+  
+body .shell-main-paint .button {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+  }
+  
+  body .shell-main-paint .button .button-left,
+  body .shell-main-paint .button .button-right {
+    font-size: 50px;
+    background-color: rgba(160, 193, 255, 0.7);
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 500px;
+  }
+
+body .shell-main-paint .button {
+    height: 200px;
+}
+
+body .shell-main-paint .button .button-left,
+body .shell-main-paint .button .button-right {
+    line-height: 200px;
+}
+
+body .shell-main-paint .button .button-left,
+body .shell-main-paint .button .button-right {
+    width: 10px;
+    font-size: 20px;
+    opacity: .2;
+}
+
+
+
